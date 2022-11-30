@@ -61,13 +61,16 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
+  ${renderLicenseBadge(data.license)}
+
   ## Table of Contents 
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [License] (#license)
   - [Contribution](#contribution)
   - [Testing](#testing)
-  - [Additional Info](#additional-info)
+  - [Questions](#questions)
 
   ## Description:
   ${data.description}
@@ -79,7 +82,6 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License:
-  ${renderLicenseBadge(data.license)}
   ${renderLicenseSection(data.license)}
   ${renderLicenseLink(data.license)}
 
@@ -89,7 +91,7 @@ function generateMarkdown(data) {
   ## Testing:
   ${data.testing}
 
-  ## Additional Info:
+  ## Questions
   - Github: [${data.github}](https://github.com/${data.github})
   - Email: ${data.email} `;
 }
